@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>924,651</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1081,651</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>chatgpt_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -94,7 +94,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Sort&amp;Order" sap:VirtualizedContainerService.HintSize="594,495" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="This Process will sort the Emails by Newest&gt;Main Recipient&gt;CC Recipient&gt;All Emails " DisplayName="Sort&amp;Order" sap:VirtualizedContainerService.HintSize="594,526" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="EmailList" />
       <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="userEmailAddress" />
@@ -105,9 +105,11 @@
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetIMAPMailMessages ClientName="{x:Null}" ClientVersion="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="[Email]" EnableSSL="True" FilterExpression="Dim mainRecipientEmails = emailList.Where(Function(email) email.To.Any(Function(recipient) recipient.Address = userEmailAddress)).ToList()&#xD;&#xA;Dim ccRecipientEmails = emailList.Where(Function(email) email.CC.Any(Function(recipient) recipient.Address = userEmailAddress)).ToList()&#xD;&#xA;Dim allFilteredEmails = mainRecipientEmails.Concat(ccRecipientEmails).ToList()" FilterExpressionCharacterSet="US-ASCII" sap:VirtualizedContainerService.HintSize="532,25" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_1" IgnoreCRL="False" MailFolder="Inbox" MarkAsRead="False" Messages="[EmailList]" OnlyUnreadMessages="True" OrderByDate="NewestFirst" Password="[Password]" Port="993" SecureConnection="Auto" Server="imap.gmail.com" Top="10" />
+    <ui:GetIMAPMailMessages ClientName="{x:Null}" ClientVersion="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="[Email]" EnableSSL="True" FilterExpression="Dim mainRecipientEmails = emailList.Where(Function(email) email.To.Any(Function(recipient) recipient.Address = userEmailAddress)).ToList()&#xA;Dim ccRecipientEmails = emailList.Where(Function(email) email.CC.Any(Function(recipient) recipient.Address = userEmailAddress)).ToList()&#xA;Dim allFilteredEmails = mainRecipientEmails.Concat(ccRecipientEmails).ToList()" FilterExpressionCharacterSet="US-ASCII" sap:VirtualizedContainerService.HintSize="532,25" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_1" IgnoreCRL="False" MailFolder="Inbox" MarkAsRead="False" Messages="[EmailList]" OnlyUnreadMessages="True" OrderByDate="NewestFirst" Password="[Password]" Port="993" SecureConnection="Auto" Server="imap.gmail.com" Top="10" />
     <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="532,319" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[EmailList]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="snm:MailMessage">
