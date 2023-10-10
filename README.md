@@ -20,5 +20,5 @@ Keep in mind that this password is the one you use to log in to your account whe
 
 If you do not complete the steps above, the bot cannot access your emails and you will not be able to use this bot at all. 
 
-# Excel Files
+## Excel Files
 To use this bot, you must have an existing Excel file (.xslx, .xls, .xlb, .csv). This can be empty, but if you have a sheet called "Email Extraction", then the information in that sheet will be overwritten by the data collected by the bot.
