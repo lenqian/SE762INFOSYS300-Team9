@@ -10,7 +10,7 @@
   <sap:VirtualizedContainerService.HintSize>1616,1500</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Emails_To_Table_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="28">
+    <scg:List x:TypeArguments="x:String" Capacity="56">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -39,10 +39,11 @@
       <x:String>System.Reflection</x:String>
       <x:String>System.Runtime.InteropServices</x:String>
       <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Mail</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="20">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="40">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -63,6 +64,8 @@
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Emails_To_Table" sap:VirtualizedContainerService.HintSize="476,1435" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -82,7 +85,7 @@
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="snm:MailMessage">
           <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="item" />
+            <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="email" />
           </ActivityAction.Argument>
           <Sequence DisplayName="Extract Sender,Subject,Body,CC,BCC,Datetime" sap:VirtualizedContainerService.HintSize="376,1113" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
@@ -107,7 +110,7 @@
                 <OutArgument x:TypeArguments="x:String">[Sender]</OutArgument>
               </Assign.To>
               <Assign.Value>
-                <InArgument x:TypeArguments="x:String">[item.Sender.User]</InArgument>
+                <InArgument x:TypeArguments="x:String">[email.Sender.User]</InArgument>
               </Assign.Value>
             </Assign>
             <Assign DisplayName="Assign Subject" sap:VirtualizedContainerService.HintSize="334,63" sap2010:WorkflowViewState.IdRef="Assign_2">
@@ -115,7 +118,7 @@
                 <OutArgument x:TypeArguments="x:String">[Subject]</OutArgument>
               </Assign.To>
               <Assign.Value>
-                <InArgument x:TypeArguments="x:String">[item.Subject.ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String">[email.Subject.ToString]</InArgument>
               </Assign.Value>
             </Assign>
             <Assign DisplayName="Assign Body" sap:VirtualizedContainerService.HintSize="334,63" sap2010:WorkflowViewState.IdRef="Assign_3">
@@ -123,7 +126,7 @@
                 <OutArgument x:TypeArguments="x:String">[Body]</OutArgument>
               </Assign.To>
               <Assign.Value>
-                <InArgument x:TypeArguments="x:String">[item.Body]</InArgument>
+                <InArgument x:TypeArguments="x:String">[email.Body]</InArgument>
               </Assign.Value>
             </Assign>
             <Assign DisplayName="Assign CC" sap:VirtualizedContainerService.HintSize="334,63" sap2010:WorkflowViewState.IdRef="Assign_4">
@@ -131,7 +134,7 @@
                 <OutArgument x:TypeArguments="snm:MailAddressCollection">[cc]</OutArgument>
               </Assign.To>
               <Assign.Value>
-                <InArgument x:TypeArguments="snm:MailAddressCollection">[item.CC]</InArgument>
+                <InArgument x:TypeArguments="snm:MailAddressCollection">[email.CC]</InArgument>
               </Assign.Value>
             </Assign>
             <Assign DisplayName="Assign BCC" sap:VirtualizedContainerService.HintSize="334,63" sap2010:WorkflowViewState.IdRef="Assign_5">
@@ -139,7 +142,7 @@
                 <OutArgument x:TypeArguments="snm:MailAddressCollection">[bcc]</OutArgument>
               </Assign.To>
               <Assign.Value>
-                <InArgument x:TypeArguments="snm:MailAddressCollection">[item.Bcc]</InArgument>
+                <InArgument x:TypeArguments="snm:MailAddressCollection">[email.Bcc]</InArgument>
               </Assign.Value>
             </Assign>
             <Assign DisplayName="Assign Datetime" sap:VirtualizedContainerService.HintSize="334,63" sap2010:WorkflowViewState.IdRef="Assign_6">
@@ -147,7 +150,7 @@
                 <OutArgument x:TypeArguments="x:String">[sendDate]</OutArgument>
               </Assign.To>
               <Assign.Value>
-                <InArgument x:TypeArguments="x:String">[item.DateAsDateTime.ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String">[email.DateAsDateTime.ToString]</InArgument>
               </Assign.Value>
             </Assign>
             <Assign sap:VirtualizedContainerService.HintSize="334,63" sap2010:WorkflowViewState.IdRef="Assign_7">
@@ -155,7 +158,7 @@
                 <OutArgument x:TypeArguments="x:String">[mainRecipient]</OutArgument>
               </Assign.To>
               <Assign.Value>
-                <InArgument x:TypeArguments="x:String">[item.To.ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String">[email.To.ToString]</InArgument>
               </Assign.Value>
             </Assign>
             <Assign sap:VirtualizedContainerService.HintSize="334,63" sap2010:WorkflowViewState.IdRef="Assign_8">

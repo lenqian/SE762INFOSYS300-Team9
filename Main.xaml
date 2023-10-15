@@ -191,15 +191,9 @@
       </TryCatch>
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,116" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Emails_To_Table.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="scg:List(snm:MailMessage)" x:Key="In_Emails">
-            <mva:VisualBasicValue x:TypeArguments="scg:List(snm:MailMessage)" ExpressionText="LastTenEmails" />
-          </InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="In_Comment">
-            <Literal x:TypeArguments="x:String">Read</Literal>
-          </InArgument>
-          <OutArgument x:TypeArguments="sd:DataTable" x:Key="Out_DT">
-            <mva:VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="EmailContent_DT" />
-          </OutArgument>
+          <InArgument x:TypeArguments="scg:List(snm:MailMessage)" x:Key="In_Emails">[LastTenEmails]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="In_Comment">Read</InArgument>
+          <OutArgument x:TypeArguments="sd:DataTable" x:Key="Out_DT">[EmailContent_DT]</OutArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,99" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Last 10 emails retrieved&quot;]">
