@@ -7,6 +7,9 @@ So if an email is unread, it would rank higher on the list, and being a main rec
 ## Requirements 
 Being able to use this bot requires the user to set up their email account in a specific way in order to give the bot access. This bot currently only works for Gmail accounts. 
 
+More details on the testing Gmail account will be found in our submission zip file.
+
+To use our own email please follow the instructions below:
 -  Enable IMAP and POP in their Gmail account. Go into Settings > Forwarding and POP/IMAP > Enable POP for all mail AND Enable IMAP 
 -  The email must have 2 factor authentication set up 
 -  Once two factor authentication is set up, the user will need to set up an "App password" Setting up an app password is quick and easy:
