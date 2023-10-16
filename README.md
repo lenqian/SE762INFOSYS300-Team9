@@ -1,6 +1,8 @@
 # SE762/INFOSYS300 Team 9 - Mail Extractor
 
-This bot allows a user to extract their latest emails, sort them and extract them into a spreadsheet of their choice. 
+This bot allows a user to extract their ten most recent emails, sort them and extract them into a spreadsheet of their choice. 
+The sorting criteria include unread status and the recipient role (main, cc, or bcc) in the received emails.
+So if an email is unread, it would rank higher on the list, and being a main recipient takes precedence over being a cc or bcc participant in the sorting order.
 
 ## Requirements 
 Being able to use this bot requires the user to set up their email account in a specific way in order to give the bot access. This bot currently only works for Gmail accounts. 
@@ -27,7 +29,7 @@ To use this bot, you must have an existing Excel file (.xslx, .xls, .xlb, .csv).
 The bot has not been officially packaged or deployed, but can be run throught debugging on UIPath. We recommend downloading UiPath Academic Alliance Studio 2021.10, as this bot has been tested extensively using this version, and has not been trialled on any other versions. 
 
 - Download all the files and open the project on UIPath. 
-- Ensure that you have the "Email_Extraction" sequence open and click "Debug/Run/Run File" to start the bot. 
+- Ensure that you have the "Main" sequence open and click "Debug/Run/Run File" to start the bot. 
 - Please ensure that you do not have the Excel file you are planning to use for this open. 
 - Once open, you can select the existing Excel spreadsheet to load the extracted information into, enter your email and password (follow the instructions above)
 
