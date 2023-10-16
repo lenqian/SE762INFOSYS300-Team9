@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1147,2328" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1156,2052" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -75,10 +75,9 @@
       <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="480,2263" sap2010:WorkflowViewState.IdRef="Sequence_18">
+  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="480,1987" sap2010:WorkflowViewState.IdRef="Sequence_18">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="team9rpa@gmail.com" Name="Email" />
       <Variable x:TypeArguments="x:String" Default="vmlmemenuafftgqw" Name="Password" />
@@ -97,7 +96,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch sap2010:Annotation.AnnotationText="User details encased in a try-catch block in case user inputs information the system is not able to handle." DisplayName="Try Catch get user details" sap:VirtualizedContainerService.HintSize="438,1009" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch sap2010:Annotation.AnnotationText="User details encased in a try-catch block in case user inputs information the system is not able to handle." DisplayName="Try Catch get user details" sap:VirtualizedContainerService.HintSize="438,930" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -106,7 +105,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence sap2010:Annotation.AnnotationText="This squence gets all the user related information that is needed later down the work flow." DisplayName="Get User details" sap:VirtualizedContainerService.HintSize="376,762" sap2010:WorkflowViewState.IdRef="Sequence_1">
+        <Sequence sap2010:Annotation.AnnotationText="This sequence gets all the user related information that is needed later down the work flow." DisplayName="Get User details" sap:VirtualizedContainerService.HintSize="376,703" sap2010:WorkflowViewState.IdRef="Sequence_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -114,8 +113,8 @@
               <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Get user worksheet file path location" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Please select an excel file to load the extracted data in&quot;]" />
-          <ui:SelectFile DisplayName="Select File to extract to" Filter="Excel|*.xlsx;*.xls;*.xlsm;*.xlsb" sap:VirtualizedContainerService.HintSize="334,55" sap2010:WorkflowViewState.IdRef="SelectFile_1" SelectedFile="[userExcelFileLocation]">
+          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Get user worksheet file path location" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Please select an excel file to load the extracted data in&quot;]" />
+          <ui:SelectFile DisplayName="Select File to extract to" Filter="Excel|*.xlsx;*.xls;*.xlsm;*.xlsb" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="SelectFile_1" SelectedFile="[userExcelFileLocation]">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -123,7 +122,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:SelectFile>
-          <If sap2010:Annotation.AnnotationText="If we find that the file type is not supported, we terminate early so we don't waste resources later" Condition="[Path.GetExtension(userExcelFileLocation) = &quot;.xlsx&quot; or Path.GetExtension(userExcelFileLocation) = &quot;.xls&quot; or Path.GetExtension(userExcelFileLocation) = &quot;.xlsm&quot; or Path.GetExtension(userExcelFileLocation) = &quot;.xlsb&quot;]" DisplayName="If file type is not supported" sap:VirtualizedContainerService.HintSize="334,162" sap2010:WorkflowViewState.IdRef="If_5">
+          <If sap2010:Annotation.AnnotationText="If we find that the file type is not supported, we terminate early so we don't waste resources later" Condition="[Path.GetExtension(userExcelFileLocation) = &quot;.xlsx&quot; or Path.GetExtension(userExcelFileLocation) = &quot;.xls&quot; or Path.GetExtension(userExcelFileLocation) = &quot;.xlsm&quot; or Path.GetExtension(userExcelFileLocation) = &quot;.xlsb&quot;]" DisplayName="If file type is not supported" sap:VirtualizedContainerService.HintSize="334,123" sap2010:WorkflowViewState.IdRef="If_5">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -145,7 +144,7 @@
               </Sequence>
             </If.Else>
           </If>
-          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog- get Email" sap:VirtualizedContainerService.HintSize="334,55" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Email:" Title="Enter email">
+          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog- get Email" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Email:" Title="Enter email">
             <ui:InputDialog.Result>
               <OutArgument x:TypeArguments="x:String">[Email]</OutArgument>
             </ui:InputDialog.Result>
@@ -156,7 +155,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:InputDialog>
-          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog - get Password" sap:VirtualizedContainerService.HintSize="334,55" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="True" Label="Password:" Title="Enter password">
+          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog - get Password" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="True" Label="Password:" Title="Enter password">
             <ui:InputDialog.Result>
               <OutArgument x:TypeArguments="x:String">[Password]</OutArgument>
             </ui:InputDialog.Result>
@@ -167,7 +166,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:InputDialog>
-          <ui:LogMessage DisplayName="Log End Module - get user details" sap:VirtualizedContainerService.HintSize="334,55" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Successfully retrieved file and login details&quot;]">
+          <ui:LogMessage DisplayName="Log End Module - get user details" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Successfully retrieved file and login details&quot;]">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -178,7 +177,7 @@
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,25" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -189,12 +188,12 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Something went wrong, please try again&quot;]" />
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Something went wrong, please try again&quot;]" />
           </ActivityAction>
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <Sequence sap2010:Annotation.AnnotationText="This module is focused on retrieving the last 10 emails of the user by date. This retrieval will include both unread and read emails." DisplayName="Retrieve last 10 emails" sap:VirtualizedContainerService.HintSize="438,200" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence sap2010:Annotation.AnnotationText="This module is focused on retrieving the last 10 emails of the user by date. This retrieval will include both unread and read emails." DisplayName="Retrieve last 10 emails" sap:VirtualizedContainerService.HintSize="438,153" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -202,7 +201,7 @@
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Start Module - Retrieve last 10 emails" sap:VirtualizedContainerService.HintSize="334,55" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Starting email retrievals&quot;]">
+      <ui:LogMessage DisplayName="Log Start Module - Retrieve last 10 emails" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Starting email retrievals&quot;]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -210,7 +209,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:LogMessage>
-      <TryCatch sap2010:Annotation.AnnotationText="IMAP (Internet Messaging Access Protocol ), connecting to the gmail server and retrieving the last 10 emails in the user's primary inbox." DisplayName="Try Catch IMAP" sap:VirtualizedContainerService.HintSize="334,200" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+      <TryCatch sap2010:Annotation.AnnotationText="IMAP (Internet Messaging Access Protocol ), connecting to the Gmail server and retrieving the last 10 emails in the user's primary inbox." DisplayName="Try Catch IMAP" sap:VirtualizedContainerService.HintSize="334,138" sap2010:WorkflowViewState.IdRef="TryCatch_2">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -238,7 +237,7 @@
           </Catch>
         </TryCatch.Catches>
       </TryCatch>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Runs the Email_To_Table workflow. &#xD;&#xA;Input arguments include: the list of emails from the the IMAP activity above (In_Emails) and the default comment string &quot;Read&quot;(In_Comments).&#xD;&#xA;Output argument include: The output data table that includes the email contents (Out_DT)." DisplayName="Invoke Email to DataTable Workflow " sap:VirtualizedContainerService.HintSize="334,242" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Emails_To_Table.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Runs the Email_To_Table workflow. &#xA;Input arguments include: the list of emails from the the IMAP activity above (In_Emails) and the default comment string &quot;Read&quot;(In_Comments).&#xA;Output argument include: The output data table that includes the email contents (Out_DT)." DisplayName="Invoke Email to DataTable Workflow " sap:VirtualizedContainerService.HintSize="334,214" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Emails_To_Table.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="scg:List(snm:MailMessage)" x:Key="In_Emails">[LastTenEmails]</InArgument>
           <InArgument x:TypeArguments="x:String" x:Key="In_Comment">Read</InArgument>
@@ -252,7 +251,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:InvokeWorkflowFile>
-      <ui:LogMessage DisplayName="Log End Module - Retrieve last 10 emails" sap:VirtualizedContainerService.HintSize="334,55" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Last 10 emails retrieved&quot;]">
+      <ui:LogMessage DisplayName="Log End Module - Retrieve last 10 emails" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Last 10 emails retrieved&quot;]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -261,7 +260,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:LogMessage>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="This module is focused on retrieving the unread emails only of the user by date. " DisplayName="Retrieve unread emails" sap:VirtualizedContainerService.HintSize="438,162" sap2010:WorkflowViewState.IdRef="Sequence_5">
+    <Sequence sap2010:Annotation.AnnotationText="This module is focused on retrieving the unread emails only of the user by date. " DisplayName="Retrieve unread emails" sap:VirtualizedContainerService.HintSize="438,123" sap2010:WorkflowViewState.IdRef="Sequence_5">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -269,7 +268,7 @@
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Start Module - Retrieve unread emails" sap:VirtualizedContainerService.HintSize="334,55" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;Starting unread email retrievals&quot;]">
+      <ui:LogMessage DisplayName="Log Start Module - Retrieve unread emails" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;Starting unread email retrievals&quot;]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -277,7 +276,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:LogMessage>
-      <TryCatch sap2010:Annotation.AnnotationText="IMAP (Internet Messaging Access Protocol ), connecting to the gmail server and retrieving the last unread emails in the user's primary inbox." DisplayName="Try Catch IMAP" sap:VirtualizedContainerService.HintSize="334,200" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+      <TryCatch sap2010:Annotation.AnnotationText="IMAP (Internet Messaging Access Protocol ), connecting to the Gmail server and retrieving the last unread emails in the user's primary inbox." DisplayName="Try Catch IMAP" sap:VirtualizedContainerService.HintSize="334,153" sap2010:WorkflowViewState.IdRef="TryCatch_3">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -305,7 +304,7 @@
           </Catch>
         </TryCatch.Catches>
       </TryCatch>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Runs the Email_To_Table workflow. &#xD;&#xA;Input arguments include: the list of emails from the the IMAP activity above (In_Emails) and the default comment string &quot;Unread&quot; (In_Comments).&#xD;&#xA;Output argument include: The output data table that includes the email contents (Out_DT)." DisplayName="Invoke Email to DataTable Workflow " sap:VirtualizedContainerService.HintSize="334,261" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Emails_To_Table.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Runs the Email_To_Table workflow. &#xA;Input arguments include: the list of emails from the the IMAP activity above (In_Emails) and the default comment string &quot;Unread&quot; (In_Comments).&#xA;Output argument include: The output data table that includes the email contents (Out_DT)." DisplayName="Invoke Email to DataTable Workflow " sap:VirtualizedContainerService.HintSize="334,214" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Emails_To_Table.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="scg:List(snm:MailMessage)" x:Key="In_Emails">[UnreadEmails]</InArgument>
           <InArgument x:TypeArguments="x:String" x:Key="In_Comment">unread</InArgument>
@@ -319,7 +318,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:InvokeWorkflowFile>
-      <ui:LogMessage DisplayName="Log End Module - Retrieve last unread emails" sap:VirtualizedContainerService.HintSize="334,55" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Unread email retrieved&quot;]">
+      <ui:LogMessage DisplayName="Log End Module - Retrieve last unread emails" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Unread email retrieved&quot;]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -328,7 +327,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:LogMessage>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="This module is about extracting the two data tables from the module above into one datatable and extracting out the important information to add correct commenting." DisplayName="Extract necessary details" sap:VirtualizedContainerService.HintSize="438,219" sap2010:WorkflowViewState.IdRef="Sequence_15">
+    <Sequence sap2010:Annotation.AnnotationText="This module is about extracting the two data tables from the module above into one datatable and extracting out the important information to add correct commenting." DisplayName="Extract necessary details" sap:VirtualizedContainerService.HintSize="438,183" sap2010:WorkflowViewState.IdRef="Sequence_15">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -336,7 +335,7 @@
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Start Module - extract necessary details" sap:VirtualizedContainerService.HintSize="334,55" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Starting details extraction&quot;]">
+      <ui:LogMessage DisplayName="Log Start Module - extract necessary details" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Starting details extraction&quot;]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -344,7 +343,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:LogMessage>
-      <ui:JoinDataTables sap2010:Annotation.AnnotationText="The activity joins the two data tables from the previous two modules (joining the the last 10 emails with the unread emails) into one merged data table called &quot;MergedDT&quot;" DataTable1="[EmailContentDT]" DataTable2="[UnreadContentDT]" DisplayName="Join Data Tables" sap:VirtualizedContainerService.HintSize="334,147" sap2010:WorkflowViewState.IdRef="JoinDataTables_1" JoinType="Left" OutputDataTable="[MergedDT]">
+      <ui:JoinDataTables sap2010:Annotation.AnnotationText="The activity joins the two data tables from the previous two modules (joining the the last 10 emails with the unread emails) into one merged data table called &quot;MergedDT&quot;" DataTable1="[EmailContentDT]" DataTable2="[UnreadContentDT]" DisplayName="Join Data Tables" sap:VirtualizedContainerService.HintSize="334,131" sap2010:WorkflowViewState.IdRef="JoinDataTables_1" JoinType="Left" OutputDataTable="[MergedDT]">
         <ui:JoinDataTables.Arguments>
           <scg:List x:TypeArguments="ui:JoinOperationArgument" Capacity="4">
             <ui:JoinOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="EQ">
@@ -387,19 +386,19 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:JoinDataTables>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Apply commenting logic to each role in the email data table." DataTable="[MergedDT]" DisplayName="For Each Row in the email Data Table" sap:VirtualizedContainerService.HintSize="334,124" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Apply commenting logic to each role in the email data table." DataTable="[MergedDT]" DisplayName="For Each Row in the email Data Table" sap:VirtualizedContainerService.HintSize="334,108" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Commenting logic" sap:VirtualizedContainerService.HintSize="242,898" sap2010:WorkflowViewState.IdRef="Sequence_14">
+            <Sequence DisplayName="Commenting logic" sap:VirtualizedContainerService.HintSize="242,749" sap2010:WorkflowViewState.IdRef="Sequence_14">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <If sap2010:Annotation.AnnotationText="If the email is unread, then mark in the comments that the email is &quot;New&quot;" Condition="[CurrentRow(&quot;Sender_1&quot;).ToString = CurrentRow(&quot;Sender&quot;).ToString]" DisplayName="If email is unread" sap:VirtualizedContainerService.HintSize="200,143" sap2010:WorkflowViewState.IdRef="If_1">
+              <If sap2010:Annotation.AnnotationText="If the email is unread, then mark in the comments that the email is &quot;New&quot;" Condition="[CurrentRow(&quot;Sender_1&quot;).ToString = CurrentRow(&quot;Sender&quot;).ToString]" DisplayName="If email is unread" sap:VirtualizedContainerService.HintSize="200,108" sap2010:WorkflowViewState.IdRef="If_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -434,7 +433,7 @@
                   </Sequence>
                 </If.Else>
               </If>
-              <If sap2010:Annotation.AnnotationText="If the user is the main recipient then mark it down, otherwise mark it down that the user is not the main reicpient in the respective column." Condition="[CurrentRow(&quot;MainRecipient&quot;).ToString.Contains(Email)]" DisplayName="If user is main recipeint" sap:VirtualizedContainerService.HintSize="200,181" sap2010:WorkflowViewState.IdRef="If_2">
+              <If sap2010:Annotation.AnnotationText="If the user is the main recipient then mark it down, otherwise mark it down that the user is not the main recipient in the respective column." Condition="[CurrentRow(&quot;MainRecipient&quot;).ToString.Contains(Email)]" DisplayName="If user is main recipeint" sap:VirtualizedContainerService.HintSize="200,153" sap2010:WorkflowViewState.IdRef="If_2">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -477,7 +476,7 @@
                   </Sequence>
                 </If.Else>
               </If>
-              <If sap2010:Annotation.AnnotationText="If the user is a cc recipient then mark it down, otherwise mark it down that the user is not the cc recipient in the respective column." Condition="[CurrentRow(&quot;cc&quot;).ToString.Contains(Email)]" DisplayName="If CC" sap:VirtualizedContainerService.HintSize="200,181" sap2010:WorkflowViewState.IdRef="If_3">
+              <If sap2010:Annotation.AnnotationText="If the user is a cc recipient then mark it down, otherwise mark it down that the user is not the cc recipient in the respective column." Condition="[CurrentRow(&quot;cc&quot;).ToString.Contains(Email)]" DisplayName="If CC" sap:VirtualizedContainerService.HintSize="200,138" sap2010:WorkflowViewState.IdRef="If_3">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -520,7 +519,7 @@
                   </Sequence>
                 </If.Else>
               </If>
-              <If sap2010:Annotation.AnnotationText="If the user is a bcc recipient then mark it down, otherwise mark it down that the user is not the bcc recipient in the respective column." Condition="[CurrentRow(&quot;bcc&quot;).ToString.Contains(Email)]" DisplayName="If BCC" sap:VirtualizedContainerService.HintSize="200,181" sap2010:WorkflowViewState.IdRef="If_4">
+              <If sap2010:Annotation.AnnotationText="If the user is a bcc recipient then mark it down, otherwise mark it down that the user is not the bcc recipient in the respective column." Condition="[CurrentRow(&quot;bcc&quot;).ToString.Contains(Email)]" DisplayName="If BCC" sap:VirtualizedContainerService.HintSize="200,138" sap2010:WorkflowViewState.IdRef="If_4">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -529,13 +528,13 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <If.Then>
-                  <Sequence sap:VirtualizedContainerService.HintSize="306,155" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_12">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign sap:VirtualizedContainerService.HintSize="264,63" sap2010:WorkflowViewState.IdRef="Assign_22">
+                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_22">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:Object">[CurrentRow("bcc")]</OutArgument>
                       </Assign.To>
@@ -546,13 +545,13 @@
                   </Sequence>
                 </If.Then>
                 <If.Else>
-                  <Sequence sap:VirtualizedContainerService.HintSize="306,155" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                  <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_13">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign sap:VirtualizedContainerService.HintSize="264,63" sap2010:WorkflowViewState.IdRef="Assign_23">
+                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_23">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:Object">[CurrentRow("bcc")]</OutArgument>
                       </Assign.To>
@@ -574,7 +573,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEachRow>
-      <ui:LogMessage DisplayName="Log End Module - extract necessary details" sap:VirtualizedContainerService.HintSize="334,55" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Detail extraction complete&quot;]">
+      <ui:LogMessage DisplayName="Log End Module - extract necessary details" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Detail extraction complete&quot;]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -583,7 +582,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:LogMessage>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="This module focuses on filtering and sorting the data table to be ready to be exported to the user selected worksheet." DisplayName="Filter and Sort" sap:VirtualizedContainerService.HintSize="438,181" sap2010:WorkflowViewState.IdRef="Sequence_16">
+    <Sequence sap2010:Annotation.AnnotationText="This module focuses on filtering and sorting the data table to be ready to be exported to the user's selected worksheet." DisplayName="Filter and Sort" sap:VirtualizedContainerService.HintSize="438,153" sap2010:WorkflowViewState.IdRef="Sequence_16">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -591,7 +590,7 @@
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Start Module" sap:VirtualizedContainerService.HintSize="264,55" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Info" Message="[&quot;Starting filter and sort&quot;]">
+      <ui:LogMessage DisplayName="Log Start Module" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Info" Message="[&quot;Starting filter and sort&quot;]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -599,7 +598,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:LogMessage>
-      <ui:FilterDataTable sap2010:Annotation.AnnotationText="This activity filters and keeps only the columns that are applicable, such as date, sender, subject, body etc. and outputs it into the &quot;FinalDT&quot; variable." DataTable="[MergedDT]" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="264,200" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[FinalDT]" SelectColumnsMode="Keep">
+      <ui:FilterDataTable sap2010:Annotation.AnnotationText="This activity filters and keeps only the columns that are applicable, such as date, sender, subject, body etc. and outputs it into the &quot;FinalDT&quot; variable." DataTable="[MergedDT]" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="262,153" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[FinalDT]" SelectColumnsMode="Keep">
         <ui:FilterDataTable.Filters>
           <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
             <ui:FilterOperationArgument Column="{x:Null}" Operand="{x:Null}" BooleanOperator="And" Operator="LT" />
@@ -625,7 +624,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:FilterDataTable>
-      <Assign sap2010:Annotation.AnnotationText="Sorts the data table in the order of comments ascending, then main recipients ascending, then cc ascending then bcc ascending." DisplayName="Sort" sap:VirtualizedContainerService.HintSize="264,151" sap2010:WorkflowViewState.IdRef="Assign_24">
+      <Assign sap2010:Annotation.AnnotationText="Sorts the data table in the order of comments ascending, then main recipients ascending, then cc ascending then bcc ascending." DisplayName="Sort" sap:VirtualizedContainerService.HintSize="262,132" sap2010:WorkflowViewState.IdRef="Assign_24">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[FinalDT.DefaultView.Sort]</OutArgument>
         </Assign.To>
@@ -638,7 +637,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </Assign>
-      <Assign sap2010:Annotation.AnnotationText="Reassigns the sorted data table to the final data table, in a more humanly reader order of date, sender, subject, body, comments, mainrecipient, cc, bcc. " sap:VirtualizedContainerService.HintSize="264,170" sap2010:WorkflowViewState.IdRef="Assign_25">
+      <Assign sap2010:Annotation.AnnotationText="Reassigns the sorted data table to the final data table, in a more human readable order of date, sender, subject, body, comments, mainrecipient, cc, bcc. " sap:VirtualizedContainerService.HintSize="262,132" sap2010:WorkflowViewState.IdRef="Assign_25">
         <Assign.To>
           <OutArgument x:TypeArguments="sd:DataTable">[FinalDT]</OutArgument>
         </Assign.To>
@@ -651,7 +650,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </Assign>
-      <ui:LogMessage DisplayName="Log End Module - filter and sort" sap:VirtualizedContainerService.HintSize="264,55" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Sorting Successful&quot;]">
+      <ui:LogMessage DisplayName="Log End Module - filter and sort" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Sorting Successful&quot;]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -660,7 +659,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:LogMessage>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="This module is about the writing the formatted data table from the previous module onto the user selected worksheet." DisplayName="Write to worksheet" sap:VirtualizedContainerService.HintSize="438,200" sap2010:WorkflowViewState.IdRef="Sequence_17">
+    <Sequence sap2010:Annotation.AnnotationText="This module is about the writing the formatted data table from the previous module onto the user selected worksheet." DisplayName="Write to worksheet" sap:VirtualizedContainerService.HintSize="438,153" sap2010:WorkflowViewState.IdRef="Sequence_17">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -668,7 +667,7 @@
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Start Module - extract to worksheet" sap:VirtualizedContainerService.HintSize="334,55" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Starting write to worksheet&quot;]">
+      <ui:LogMessage DisplayName="Log Start Module - extract to worksheet" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Starting write to worksheet&quot;]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -676,7 +675,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:LogMessage>
-      <ui:WriteRange AddHeaders="True" sap2010:Annotation.AnnotationText="Writes the final data table to the user selected worksheet on the sheet &quot;Email Extraction&quot; and starting at the position A1" DataTable="[FinalDT]" DisplayName="Write to worksheet" sap:VirtualizedContainerService.HintSize="334,181" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Email Extraction" StartingCell="A1" WorkbookPath="[userExcelFileLocation]">
+      <ui:WriteRange AddHeaders="True" sap2010:Annotation.AnnotationText="Writes the final data table to the user selected worksheet on the sheet &quot;Email Extraction&quot; and starting at the position A1" DataTable="[FinalDT]" DisplayName="Write to worksheet" sap:VirtualizedContainerService.HintSize="334,138" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Email Extraction" StartingCell="A1" WorkbookPath="[userExcelFileLocation]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -685,8 +684,8 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:WriteRange>
-      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="User notification" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[&quot;Email extraction is completed&quot;]" />
-      <ui:LogMessage DisplayName="Log End Module - extract to worksheet" sap:VirtualizedContainerService.HintSize="334,55" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;Email extraction and write is complete&quot;]">
+      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="User notification" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[&quot;Email extraction is completed&quot;]" />
+      <ui:LogMessage DisplayName="Log End Module - extract to worksheet" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;Email extraction and write is complete&quot;]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
